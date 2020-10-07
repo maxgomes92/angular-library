@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { MyLibService } from './my-lib.service';
 
 @Component({
   selector: 'lib-my-lib',
-  template: `
-    <p>
-      my-lib works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './my-lib.page.html',
 })
 export class MyLibComponent implements OnInit {
+  public currentTime: string;
 
-  constructor() { }
+  constructor(
+    public myLibService: MyLibService,
+  ) { }
 
   ngOnInit(): void {
   }
 
+  onClick() {
+    this.currentTime = this.myLibService.getTime();
+    console.log('click', this.currentTime)
+  }
 }
