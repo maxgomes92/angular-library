@@ -7,7 +7,8 @@
     "build": "ng build",
     "build:watch": "ng build my-lib --watch",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "release:my-lib": "ng build --prod && cd ./dist/my-lib && npm pack && mv my-lib-* ../../"
   },
   "private": true,
   "dependencies": {
