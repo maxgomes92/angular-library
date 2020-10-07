@@ -4,7 +4,8 @@
   "peerDependencies": {
     "@angular/common": "^10.1.4",
     "@angular/core": "^10.1.4",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "sip.js": "^0.17.1"
   },
   "dependencies": {
     "tslib": "^2.0.0"
